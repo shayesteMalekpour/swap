@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --primary: #1b202a;
+  --secondary: #252b36;
+  --input: #2c3342;
+  --text: #ffffffbf;
+  --border: rgba(255, 255, 255, 0.251);
+}
+html {
+  height: 100%;
+  background-color: #1d2835;
+  background-image: linear-gradient(
+    180deg,
+    rgba(50, 70, 80, 0.9) 0%,
+    #0d101b 100%
+  );
+}
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -5;
+  background: linear-gradient(180deg, rgba(50, 70, 80, 0.9) 0%, #0d101b 100%);
+}
+html::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  background-color: #1d2835;
+  background-image: linear-gradient(
+    180deg,
+    rgba(50, 70, 80, 0.9) 0%,
+    #0d101b 100%
+  );
+  background-image: url("./assets/images/body-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: initial;
+  height: 100%;
+  transition: background 0.2s linear;
+  background-size: cover;
+}
+body {
+  background-color: var(--primary);
+  margin: 0;
+  color: var(--text);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 12px;
+  box-sizing: border-box;
+}
+body {
+  background: none;
+  position: relative;
+  min-height: 100vh;
+  z-index: 9999;
+  margin: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-attachment: initial;
+  /* background-color: transparent;
+  background-image: var(--#{$prefix}body-bg-image);
+  background-size: var(--#{$prefix}body-bg-image-size); */
+  background-repeat: repeat;
+  background-attachment: initial;
+  z-index: -5;
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+.box {
+  max-width: 450px;
+  margin: 132px auto 0;
+  border: 1px solid var(--border);
+  padding: 36px 28px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 440px) {
+  .box {
+    margin: 32px auto 0;
+    padding: 24px;
+  }
+}
+.title {
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.info {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 12px;
+  margin-bottom: 24px;
+}
+.input {
+  margin-bottom: 32px;
+}
+input {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  outline: none;
+  height: 22px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 12px;
+}
+input:focus {
+  box-shadow: 0 0 0 0.25rem var(--border);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.primary-button {
+  background-color: var(--input);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 16px 22px;
+}
+.primary-button:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--primary);
+}
+
+.QR-code-svg {
+  margin: 0 auto;
+}
+.QR-card-input {
+  width: 100%;
+  margin-top: 24px;
+  position: relative;
+  display: flex;
+}
+.QR-card-input input {
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+.QR-card-input button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  outline: none;
+  background-color: var(--input);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+}
